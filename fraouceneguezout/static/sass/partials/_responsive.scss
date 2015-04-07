@@ -1,0 +1,40 @@
+@media (max-width: 767px){
+    #wrapper-resume{ 
+        .scroll {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            right: 0;
+            .active{
+            	width: 100%;
+            	margin-left:0;
+            	text-align:center;
+            	height: 60px;
+
+            }
+            .bloc{
+            	margin-left:0;
+            	height: 60px;
+            }
+        }
+	    #wrapper-skills{
+	    	padding-left:8%;
+	    	padding-right:8%;
+	    } 
+	    #wrapper-education{
+	    	padding-left:0;
+	    	padding-right:0;
+	    	.experience {
+	    		margin-left:10%;
+	    	}
+	    } 
+	    #experiences{
+	    	padding-left:0;
+	    	padding-right:0;
+            #tool-align{
+                text-align: center;
+            }
+
+	    }
+    }
+    }

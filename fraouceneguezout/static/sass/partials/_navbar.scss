@@ -1,0 +1,31 @@
+$navbar-background: $zenburn-bg;
+$navbar-border-color:     $navbar-background;
+$navbar-link-background:     $navbar-background;
+$navbar-link-background-hover:     $zenburn-bg-p1;
+$navbar-link-color:     $zenburn-fg;
+$navbar-link-color-hover:     $navbar-link-color;
+
+
+.navbar-default {
+    background-color: $navbar-background;
+    border-color: $navbar-background;
+
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    a {
+        /* font-family: "Monaco"; */
+        color: $navbar-link-color !important;
+        background-color: $navbar-link-background !important;
+
+        &:hover {
+            color: $navbar-link-color !important;
+            background-color: $navbar-link-background-hover !important;
+        }
+    }
+
+    .navbar-header {
+       
+    }
+}

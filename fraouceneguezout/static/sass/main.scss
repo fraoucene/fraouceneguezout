@@ -1,0 +1,76 @@
+@import "helpers/colors";
+@import "helpers/mixins";
+@import "partials/directives";
+@import "partials/navbar";
+@import "partials/resume";
+@import "partials/responsive";
+
+
+$label-text: $zenburn-fg-m1;
+$label-python: $zenburn-green-p1;
+$label-js: $zenburn-yellow-p2;
+$label-css: $zenburn-blue-p3;
+$link-color: $zenburn-red-p1;
+$link-color-hover: $zenburn-red-m1;
+$navbar-height: 50px;
+
+
+html {
+    height: 100%;
+    width: 100%;
+
+    body {
+        height: 100%;
+        width: 100%;
+        /*padding-top: $navbar-height;*/
+
+        #wrapper-content {
+            height: 100%;
+            width: 100%;
+
+            a {
+                color: $link-color;
+                text-decoration: none;
+
+                &:hover {
+                    color: $link-color-hover;
+                    text-decoration: none;
+                }
+            }
+
+            .code {
+                font-family: "Monaco";
+                font-size: 60%;
+            }
+
+            .label {
+                margin-right: 0.5em;
+                display: inline-block;
+                color: #222222 !important;
+                font-size: 60%;
+                border-radius: 30px;
+
+
+                &.label-css {
+                    background-color: $label-css;
+                }
+
+                &.label-js {
+                    background-color: $label-js;
+                }
+
+                &.label-python {
+                    background-color: $label-python;
+                }
+
+                &.label-java {
+                    background-color: $label-python;
+                }
+
+                & .fa {
+                    font-size: 70%;
+                }
+            }
+        }
+    }
+}

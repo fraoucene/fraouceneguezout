@@ -1,0 +1,92 @@
+
+#experiences, #wrapper-education{
+	.experience {
+		background: rgb(34, 34, 34);
+		margin-bottom: 20px;
+		width: 85%;
+		margin-left: 8%;
+		border :2px solid #74726E; 
+		border-radius: 64px; 
+		.footer{
+			margin-bottom: 2%;
+			text-align: center;
+			margin-top: -4%
+		}
+
+	}
+	.experience-details{
+		margin-top: -10%;
+		text-align: center;
+		bottom: 0;
+	}
+	.detail-label{
+		margin-left: 80%;
+		margin-bottom: 1%;
+	}
+	.detail{
+		padding-left: 2%;
+		padding-right: 2%;
+		color: rgb(116, 114, 107);	
+		li{
+			font-size: 16px;
+		}	
+	}
+	.sep{
+		width: 80%;
+		background-color: #22A39F !important;
+		margin-top: 3%; 
+	}
+	.panel-body {
+		padding: 15px;
+		margin-bottom: -20px;
+		margin-top: -20px;
+	}
+
+	.title{
+		text-align: center;
+		font-weight: 700;
+		font-size: 22px;
+		margin-bottom: 10px;
+		margin-top: 10px;
+		color: #22A39F ; 
+	}
+	h4 {
+		font-weight: 300;
+		margin: 4px 0 0px;
+		color : #22A39F
+	}
+	p{
+		margin: 0 0 10px;
+		strong {
+			display: block;
+		  	padding-top: 8px;
+		  	margin-bottom: 10px;
+		}
+	}
+	.text{
+		color: #74726E;
+		font-family: 'Open Sans', sans-serif !important;
+		font-size: 15px;
+	}
+	.experience-period{
+		color: #74726E !important;
+		font-size: 16px !important;
+	}
+
+	.location, .link, a{
+		color : #22A39F !important;
+
+	}
+	.glyphicon {
+        padding-top: 0px;
+        padding-right: 1px;
+        padding-left: 1px;
+        font-size: 14px !important;
+    }  
+    .row{
+    	margin-bottom: 2%;
+
+    }
+
+
+}

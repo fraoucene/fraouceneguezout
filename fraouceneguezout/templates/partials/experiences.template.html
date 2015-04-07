@@ -1,0 +1,40 @@
+<div class="experience row">
+
+<div class="title">{{title}}</div>
+	<div class="col-md-4 ">
+		<center><h4>{{company}}</h4></center>
+		
+		<p class="experience-period">
+			<span>{{start}}</span>/
+			<span ng-if="end">{{end}}</span>
+			<span ng-if="!end">encours</span>
+			<!--<center><p ng-if="end">{{getNbrMonth(start,end)}} </p></center>-->
+		</p>
+	</div>
+	<div class="col-md-8">
+		<p>
+			<span class="text">
+			{{description}}</span>
+			<div ng-if="tools" id="tool-align" class="panel-body lead" ng-bind-html="tools"></div>
+		</p>
+	</div>
+
+	<div ng-show="!show && detail" class="detail-label">
+		<i><a ng-show="!show" ng-click="show='true'" href="" style="margin-right:5%">more details</a></i>
+		<!--<a href=""><span class="fa fa-arrow-down"></span></a>-->
+	</div>
+	<div ng-show="show" class="detail">
+			<hr class="sep">
+		<div class="panel-body lead" ng-bind-html="detail"></div>
+	</div>
+	<div ng-show="show" class="detail-label">
+		<i><a ng-click="show=false" href="" style="margin-right:5%">hide details</a></i>
+		<!--<a href=""><span class="fa fa-arrow-down"></span></a>-->
+	</div>
+	<div class ="footer">
+		<a class="glyphicon glyphicon-map-marker" ng-bind-html="location"></a>
+		<a  ng-if="lien" class="seperator">|</a>
+		<a ng-if="lien" class="glyphicon glyphicon-link"></a>
+		<a ng-if="lien" href="{{lien}}" target="_blank">{{lien}}</a>
+	</div>
+</div>

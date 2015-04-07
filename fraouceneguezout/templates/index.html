@@ -1,0 +1,57 @@
+{% load staticfiles %}
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Fraoucene Guezout{% endblock title %}</title>
+
+        <!-- Start including stylesheets -->
+        <link rel="stylesheet" href="{% static 'css/vendor/bootstrap/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/vendor/elusive-icons/elusive-icons.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/vendor/bootstrap/theme.cosmo.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/vendor/font-awesome/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{% static 'stylesheets/main.css' %}">
+        <!-- End including stylesheets -->
+
+        <!-- Start Google fonts -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Pacifico">
+        <!-- End Google fonts -->
+
+        <!-- Start IE8 support -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+            <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+        <!-- End IE8 support -->
+    </head>
+    <body ng-app="MainApp">
+
+        <!-- Start content -->
+        <!--<ng-include src="'partials/navbar.html'"></ng-include>-->
+        <div id="wrapper-content"ui-view></div>
+
+        <!-- End content -->
+
+        <!-- Start including scripts -->
+        <script src="{% static 'js/vendor/jquery/jquery.min.js' %}"></script>
+        <script src="{% static 'js/vendor/bootstrap/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/vendor/angular/angular.min.js' %}"></script>
+        <script src="{% static 'js/vendor/angular.round-progress/round-progress.min.js' %}"></script>
+        <script src="{% static 'js/vendor/angular.sanitize/sanitize.min.js' %}"></script>
+        <script src="{% static 'js/vendor/angular.ui-bootstrap/ui-bootstrap-tpls.min.js' %}"></script>
+        <script src="{% static 'js/vendor/angular.ui-router/ui-router.min.js' %}"></script>
+        <script src="{% static 'js/vendor/lodash/lodash.min.js' %}"></script>
+        <script src="{% static 'js/me/app.js' %}"></script>
+        <script src="{% static 'js/me/controllers.js' %}"></script>
+        <script src="{% static 'js/me/directives.js' %}"></script>
+        <script src="{% static 'js/me/filters.js' %}"></script>
+        <script src="{% static 'js/me/routes.js' %}"></script>
+        <script src="{% static 'js/me/services.js' %}"></script>
+        <!-- End including scripts -->
+    </body>
+</html>

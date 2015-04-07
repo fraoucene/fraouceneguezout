@@ -1,0 +1,285 @@
+<!-- Start resume -->
+
+
+
+<div id="wrapper-resume">
+
+
+    <!-- Start home -->
+     
+    <div id="wrapper-home">  
+        <div class="container test">
+            <div class="text-center">
+                <h1 style="color:{{configuration.colors.title}} "> <b>Fraoucene Guezout</b></h1>
+                <hr width="40%">
+                <p style="color:{{ configuration.colors.subtitle }}" class="lead">Interactive resume</p>
+            </div>
+        </div>
+    </div>
+    <!-- End home -->
+    <a class="scroll-down"> 
+        <span ng-click="scrollto('#wrapper-about')" class="glyphicon glyphicon-chevron-down"></span>
+    </a>
+    <!-- Start scroll -->
+    <nav  class="scroll" id="navbar-example" role="navigation">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-y"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+            <div  class="collapse navbar-collapse navbar-ex1-collapse center-text">
+                <ul class="nav navbar-nav">
+                    <li class="bloc" ng-class="{'active':section=='#wrapper-about'}" ng-click="scrollto('#wrapper-about')"><a href="">Profile</a></li>
+                    <li class="bloc" ng-class="{'active':section=='#experiences'}" ng-click="scrollto('#experiences')"><a href="">Experiences</a></li>
+                    <li class="bloc" ng-class="{'active':section=='#wrapper-skills'}" ng-click="scrollto('#wrapper-skills')"><a href="">Abilities</a></li>
+                    <li class="bloc" ng-class="{'active':section=='#wrapper-education'}" ng-click="scrollto('#wrapper-education')"><a href="">Educations</a></li>
+                    <li class="bloc" ng-class="{'active':section=='#wrapper-contact'}" ng-click="scrollto('#wrapper-contact')" ><a href="">Contact</a></li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+	</nav>
+    <!-- End scroll -->
+
+    <!-- Start about -->
+    <div class ="profile" id="wrapper-about">
+        
+        <h2>Profile</h2>
+        <center><p >I'm a creative web developer AngularJs</p></center>
+        <hr width="80%">
+        <div class="row">
+            <div  class="col-md-4">
+                <h3 style="color:{{ configuration.colors.about }}">About me</h3>
+                <p class="lead content" ng-bind-html="data.about[0].body"></p>
+            </div>
+            <div  class="col-md-4 text-center">
+                <img class="imgProfile" src="/static/source/profile.jpg"  width="146" height="146">
+            </div>
+            <div  class="col-md-4">
+                <h3 style="color:{{ configuration.colors.about }}">Details</h3>
+                <p class="content">
+                    <strong style="color:{{ configuration.colors.about }}">Name:</strong><br>
+                    Fraoucene Guezout<br>
+                    <strong style="color:{{ configuration.colors.about }}">Age:</strong><br>
+                    26 years<br>
+                    <strong style="color:{{ configuration.colors.about }}">Location:</strong><br>
+                    49 Avnene de Paris <br> 
+                    Villejuif, France, Earth 
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- End about -->
+    <!-- Start experiences -->
+    <div id="experiences" class="container">
+            <h2>Experiences</h2>
+            <p class="lead">
+                “Protons give an atom its identity, electrons its personality.”<br>- Bill Bryson, A short history of nearly everything
+            </p>
+            <hr width="90%">
+            <div ng-repeat="experience in data.experiences.results" >
+                <experience 
+                    title="{{experience.title}}"
+                    company="{{experience.company}}"
+                    duration="{{experience.duration}}"
+                    description="{{experience.description}}"
+                    tools="{{experience.tools}}"
+                    detail="{{experience.detail}}"
+                    location="{{experience.location}}"
+                    lien="{{experience.lien}}"
+                    start="{{getFormatDate(experience.start_on)}}"
+                    end="{{getFormatDate(experience.end_on)}}"
+                ></experience>
+            </div>
+    </div>
+
+    <!-- End experiences -->
+  
+    <!-- Start skills -->
+     <div class ="profile" id="wrapper-skills">
+        <h2>Abilities</h2>
+        <center>
+        <p class="lead">“Life without knowledge is death in disguise.”
+        <br>
+        </p>
+        </center>
+        <hr>
+        <h3>Skills</h3>
+            <div class="row">
+                <div class="col-md-6 ability-title">
+                    <li  ng-if="$index < skills.length/2 " ng-repeat="skill in skills track by $index " style="  list-style-type: none;">
+                        <span>{{skill.label}}</span>
+                        <span  id="ability-score">  
+                            <a href="#">
+                                <span ng-repeat="star in stars_on[skill.label] track by $index"  class="glyphicon glyphicon-star"></span>
+                            </a>
+
+                            <span ng-repeat="star in stars_off[skill.label] track by $index" class="glyphicon glyphicon-star"></span>                 
+                        </span>
+                    </li>
+                    
+                </div>
+                <div  class="col-md-6 ability-title">
+                    <li ng-if="$index >= skills.length/2 " ng-repeat="skill in skills track by $index " style="  list-style-type: none;">
+                        <span>{{skill.label}}</span>
+                        <span  id="ability-score">  
+                            <a href="#">
+                                <span ng-repeat="star in stars_on[skill.label] track by $index"  class="glyphicon glyphicon-star"></span>
+                            </a>
+
+                            <span ng-repeat="star in stars_off[skill.label] track by $index" class="glyphicon glyphicon-star"></span>                 
+                        </span>
+                    </li>
+                    
+                </div>
+            </div>
+            <div class="text-center project-referal">
+                <p>This project is build on a custom made AngularJs framework and DjangoRestFramework.</p>
+                <a href="https://bitbucket.org/fraoucene" class="btn btn-primary" target="_blank">See project on Github</a>
+            </div>
+            <hr>
+            <h3>Tools</h3>
+            <div class="row">
+                <div class="col-md-6 ability-title">
+                    <li ng-if="$index < tools.length/2 " ng-repeat="skill in tools track by $index " style="  list-style-type: none;">
+                        <span>{{skill.label}}</span>
+                        <span  id="ability-score">  
+                            <a href="#">
+                                <span ng-repeat="star in stars_on[skill.label] track by $index"  class="glyphicon glyphicon-star"></span>
+                            </a>
+
+                            <span ng-repeat="star in stars_off[skill.label] track by $index" class="glyphicon glyphicon-star"></span>                 
+                        </span>
+                    </li>
+                    
+                </div>
+                <div class="col-md-6 ability-title">
+                    <li ng-if="$index >= tools.length/2 " ng-repeat="skill in tools track by $index " style="  list-style-type: none;">
+                        <span>{{skill.label}}</span>
+                        <span  id="ability-score">  
+                            <a href="#">
+                                <span ng-repeat="star in stars_on[skill.label] track by $index"  class="glyphicon glyphicon-star"></span>
+                            </a>
+
+                            <span ng-repeat="star in stars_off[skill.label] track by $index" class="glyphicon glyphicon-star"></span>                 
+                        </span>
+                    </li>
+                    
+                </div>
+            </div>
+            <hr>
+            <h3>Languages</h3>
+            <div class="row">
+                <div class="col-md-6 ability-title">
+                    <li ng-if="$index < languages.length/2 " ng-repeat="skill in languages track by $index " style="  list-style-type: none;">
+                        <span >{{skill.label}}</span>
+                        <span  id="ability-score">  
+                            <a href="#">
+                                <span ng-repeat="star in stars_on[skill.label] track by $index"  class="glyphicon glyphicon-star"></span>
+                            </a>
+
+                            <span ng-repeat="star in stars_off[skill.label] track by $index" class="glyphicon glyphicon-star"></span>                 
+                        </span>
+                    </li>
+                    
+                </div>
+                <div  class="col-md-6 ability-title">
+                    <li ng-if="$index >= languages.length/2 " ng-repeat="skill in languages track by $index " style="  list-style-type: none;">
+                        <span >{{skill.label}}</span>
+                        <span  id="ability-score">  
+                            <a href="#">
+                                <span ng-repeat="star in stars_on[skill.label] track by $index"  class="glyphicon glyphicon-star"></span>
+                            </a>
+
+                            <span ng-repeat="star in stars_off[skill.label] track by $index" class="glyphicon glyphicon-star"></span>                 
+                        </span>
+                    </li>
+                    
+                </div>
+            </div>
+         
+    </div>
+
+    
+    <!-- End skills -->
+
+    <!-- Start education -->
+    <div id="wrapper-education" class="section">
+        <h2>Educations</h2>
+        <p class="lead">
+            “Protons give an atom its identity, electrons its personality.”<br>- Bill Bryson, A short history of nearly everything
+        </p>
+        <hr width="80%">
+        <div ng-repeat="experience in data.education.results" >
+            <experience 
+                title="{{experience.title}}"
+                company="{{experience.school}}"
+                duration="{{experience.duration}}"
+                description="{{experience.description}}"
+                tools="{{experience.tools}}"
+                detail="{{experience.detail}}"
+                location="{{experience.location}}"
+                lien="{{experience.lien}}"
+                start="{{getFormatDate(experience.start_on)}}"
+                end="{{getFormatDate(experience.end_on)}}"
+            ></experience>
+        </div>
+    </div>
+    <!-- End education -->
+<!-- Get resume -->
+  
+    <div id="wrapper-contact"  class ="col-sm-12 text-center footer">
+        <div id="contact" class="container">
+            <div class="title">Contact</div>
+        <hr width="50%" >
+        <div class="row">
+            <div >
+                <ul class="no-bullets">
+                    <li>
+                        <a href="mailto:fraoucene.guezout@gmail.com">
+                            <span id="icon"class="fa fa-envelope-o"></span>
+                                fraoucene.guezout@gmail.com 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://twitter.com/pascalvgemert" target="_blank">
+                            <span id="icon" class="fa fa-twitter"></span>
+                            http://twitter.com/fraoucene </a>
+                    </li>
+                    <li>
+                        <a href="http://fr.linkedin.com/pub/fraoucene-guezout/69/4b/5a8" target="_blank">
+                            <span id="icon" class="fa fa-linkedin"></span>
+                            fraoucene guezout </a>
+                    </li>
+                    <!--           
+                    <li>
+                        <a href="http://www.viadeo.com/profile/002lksp8ra10jaf/" target="_blank">
+                            <span id="icon" class="el el-viadeo"></span>
+                            fraoucene guezout </a>
+                    </li>
+                    -->
+                    <li>
+                        <a href="https://github.com/fraoucene" target="_blank">
+                            <span id="icon" class="fa fa-github"></span>
+                        </a>
+                        <a href="https://bitbucket.org/fraoucene" target="_blank">
+                            <span id="icon" class="fa fa-bitbucket"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+         <hr width="40%" >
+        <div class="title">Resume</div>
+        
+            <p class="text">My resume will be automatically updated on this link. So you can keep this link for my very latest resume</p>
+            <a href="./static/source/fraoucene.pdf" target="_blank"  class ="btn btn-success">GET RESUME</a>
+    </div>        
+    
+
+<!-- END Get resume -->
+</div>
+<!-- End resume -->

@@ -1,0 +1,421 @@
+$resume-about-background: $zenburn-garnet;
+$resume-about-color: $zenburn-fg;
+$resume-experiences-background: $zenburn-bg;
+$resume-experiences-border: $zenburn-bg-p1;
+$resume-experiences-color: $zenburn-fg;
+$resume-skills-background: $zenburn-fg;
+$resume-skills-color: $zenburn-bg;
+
+
+#wrapper-resume {
+
+    height: 100%;
+    width: 100%;
+    /*background: url("http://wallpaperspicturesphotos.com/wp-content/uploads/2015/02/hd-wallpapers_1080p.jpg") no-repeat center center fixed;*/
+    background-image: url("/static/source/hd-wallpaper.jpg");
+    background-position: center top;
+    z-index: 200;
+    .section {
+        padding: 50px 0;
+
+        .delimiter {
+            margin-top: 40px;
+        }
+    }
+
+    #wrapper-home {
+        @include background-size(cover);
+        color: #EEEEEE;
+        display: table;
+        position: relative;
+        top: 30%;
+        z-index: 4;
+        text-align: center;
+        height: 100%;
+        width: 100%;
+
+        .text-vcenter {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+
+            h1 {
+                font-family: "Monaco";
+                font-size: 3.5em;
+                font-weight: 700;
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+    .scroll-down{
+        height: 80px;
+        width: 110px;
+        display: block;
+        position: absolute;
+        bottom: 0px;
+        right: 5%;
+        background-color: #222222;
+        color :#22A39F;
+        text-align: center;
+        z-index: 6;
+       
+    }
+
+    .box{
+        height: 80px;
+		width: 90px;
+		bottom: 0px;
+		right: 5%;
+  		z-index: 6;
+    }
+    .glyphicon {
+        
+        padding-top: 25px;
+        font-size: 30px;
+    }
+    .scroll-down:hover{
+        color :#22A39F;
+    }
+
+    .glyphicon:hover{
+        padding-top: 32px;
+        
+    }
+
+    #wrapper-about {
+        padding-left: 20%;
+        padding-right: 20%;
+        text-align: center;
+        background-color: $resume-about-background;
+        color: $resume-about-color;
+
+        .content {
+            display: inline-block;
+            text-align: left;
+            & :last-child {
+                margin-bottom: 0;
+            }
+
+            .fa-inverse {
+                color: $resume-about-background;
+            }
+        }
+        
+    }
+    .scroll {
+
+        background-color: #222222 !important;
+        position: fixed;
+        right: 5%;
+        top: 10%;
+        width: 110px;
+        z-index: 9;
+        text-align:center;
+        border-radius: 4px;
+      
+        .bloc{
+            height: 80px;
+            padding-top: 13px;
+            float: none;
+            font-weight: 600;
+            color: #FFFFFF;
+            font-family: "Monaco";
+            
+        }
+        .navbar-toggle {
+            border-color: #ddd;
+            border-radius: 4px;
+            .icon-bar {
+                background-color: #888;
+                display: block;
+                width: 22px;
+                height: 2px;
+                border-radius: 1px;
+            }
+        }
+        .scroll {
+          top: 0px !important;
+        }
+
+        .navbar-toggle:hover{
+            background: #eee;
+            .icon-bar {
+                background-color: #222222;
+            }
+        }
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+          /* padding: 0; */
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            border: 0;
+        }
+    .active{
+        
+        float: none;
+        background-color: #22A39F;
+        height: 80px;
+        width: 110px;
+        margin-left: -15px;
+        display: block;
+        bottom: 0px;
+     
+        text-align: center;
+        z-index: 6;
+        a:hover{
+            background: none;
+            color : #fff;
+        }
+             
+    }
+        a:hover{
+            background: none;
+            color : #22A39F;;
+        }
+        a:focus{
+            background: none;
+
+        }
+        a{
+            color: #fff;
+            
+        }
+        li{
+            margin-left: -15px;
+        };
+              
+    }
+
+
+    #wrapper-skills {
+        padding-left: 20%;
+        padding-right: 20%;
+        background-color: #fff;
+        color: $resume-skills-color;
+
+        .skill {
+            margin: 20px 0;
+
+            .skill-name {
+                position: absolute;
+                /* height: 100%; */
+                width: 100%;
+                margin-left: -15px;
+                line-height: 90px;  // See roundProgress radius
+            }
+        }
+        .project-referal{
+            margin-top: 40px;
+            p {
+                font-style: italic;
+                color: #999999;
+            }
+            .btn-primary {
+                background-color: #22A39F;
+                border-color: #1c8784;
+                border-radius: 10px;
+                height: 40px;
+                color: white;
+                padding-bottom: 6px;
+                padding-top: 6px;
+            }
+        }
+        p{
+            font-size: 18px;
+            color: #3f3f3f;
+        }
+        li {
+            min-height: 30px;
+            padding: 3px 0px;
+
+        }
+        hr {
+            margin: 40px 0px;
+            border-color: #727878;
+            opacity: 0.2;
+
+        }
+        h3{
+            color: #22a39f;
+            font-weight: 300;
+            font-size: 30px;
+            margin-bottom: 20px; 
+        } 
+        .glyphicon {
+            padding-top: 0px;
+            padding-right: 1px;
+            padding-left: 1px;
+            font-size: 14px !important;
+        } 
+    }
+    #ability-score {
+        float: right; 
+        a{
+            color: #22A39F !important;
+        }    
+    }
+    .ability-title {
+        padding-right: 5%;
+        padding-left: 5%; 
+        li{
+            padding-left: 5%;
+
+        }
+        li:hover{
+            background: #eee;
+            #ability-score  {
+            span{
+                margin-right: 3px;
+            }         
+        }
+
+        }
+          
+     }    
+
+    #wrapper-experiences {
+        padding-left: 20%;
+        padding-right: 20%;
+        @include background-size(cover);
+        display: table;
+        /*position: relative;*/
+        /* height: 800px; */
+        width: 100%;
+
+        .panel {
+            opacity: 0.9;
+            background-color: $resume-experiences-background;
+            border-color: $resume-experiences-border;
+            color: $resume-experiences-color;
+
+            .panel-heading {
+                background-color: $resume-experiences-border;
+                border-color: $resume-experiences-border;
+                color: $resume-experiences-color;
+            }
+        }
+    }
+    #wrapper-education{
+        padding-left: 20%;
+        padding-right: 20%;
+        background: #F3EFE0;
+        width: 100%;
+
+        h2 { 
+            font-size: 38px;
+            text-align: center;
+            font-weight: 300;
+            color: #22A39F;
+        }
+        p{
+            text-align: center;
+            font-size: 18px;
+            font-weight: 300;
+            color: #3f3f3f;
+
+        }
+        
+    }
+    .profile{
+
+        padding: 40px 180px;
+        h2 {
+            font-size: 38px;
+            text-align: center;
+            font-weight: 300;
+            color: #22A39F;
+        }
+        p {
+            font-size: 18px;
+        
+            font-weight: 300;
+            color: #22A39F;
+        }
+
+        .imgProfile{
+            width: 220px;
+            max-width: 246px;
+            height: auto;
+            border-radius:130px; 
+            border :10px solid rgba(34, 34, 34, 0.54);
+        }   
+    }
+.container {
+ 
+    padding-left: 10%;
+    padding-right: 10%;
+} 
+.btn-success{
+    background: #22A39F;
+    border-color: #22A39F ;
+
+}
+#experiences{
+    padding-left: 20%;
+    padding-right: 20%;
+    background: #F3EFE0;
+    width: 100%;
+    h2 {
+        font-size: 38px;
+        margin-top: 12%;
+        text-align: center;
+        font-weight: 300;
+        color: #22A39F;
+    }
+    p{
+        text-align: center;
+        font-size: 18px;
+        font-weight: 300;
+        color: #3f3f3f;
+
+    }
+}
+
+#wrapper-contact{
+    background: $zenburn-garnet !important;
+    padding-bottom: 120px;
+    #icon{
+        width: 30px;
+        height: 26px;
+        background: white;
+        border-radius: 40px;
+        padding-top: 4px;
+        font-size: 15px;
+        vertical-align: middle;
+    }
+    ul.no-bullets {
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    .title{
+        padding-top: 40px;
+        padding-bottom: 25px;
+        font-size: 30px;
+        text-align: center;
+        font-weight: 300;
+        color: #22A39F;
+    }
+    li{
+        margin-bottom: 8px;
+    }
+    a{
+        color: #22A39F;
+    }
+    .btn-success{
+        background-color: #22A39F;
+        border-color: #1c8784;
+        border-radius: 10px;
+        color: white;
+    }
+    .text{
+        color: #22A39F; 
+    }
+
+}
+
+}
