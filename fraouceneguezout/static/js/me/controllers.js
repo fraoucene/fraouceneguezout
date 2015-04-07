@@ -96,6 +96,5 @@ app.controller('ResumeController', function($scope, $http, $location, anchorSmoo
     // Get content for the education section
     $http.get('/api/resume/education/').success(function(response) {
         $scope.data.education = response;
-        console.log(response)
     });
 });
