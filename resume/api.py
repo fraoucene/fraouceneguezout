@@ -1,8 +1,13 @@
 from rest_framework import generics
 
-from .models import About, Education, Experience, Skill
-from .serializers import AboutSerializer, EducationSerializer, ExperienceSerializer, SkillSerializer
+from .models import About, Education, Experience, Skill, TitleConfiguration
+from .serializers import AboutSerializer, EducationSerializer, ExperienceSerializer, SkillSerializer, TitleConfigurationSerializer
 
+
+class TitleConfigurationList(generics.ListAPIView):
+    queryset = TitleConfiguration.objects.order_by('-pk')
+    serializer_class = TitleConfigurationSerializer
+    paginate_by = None
 
 class AboutList(generics.ListAPIView):
     queryset = About.objects.order_by('-pk')

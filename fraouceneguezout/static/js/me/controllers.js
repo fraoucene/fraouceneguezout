@@ -24,6 +24,7 @@ app.controller('ResumeController', function($scope, $http, $location, anchorSmoo
     // Get content for the about section
     $http.get('/api/resume/about/').success(function(response) {
         $scope.data.about = response.results;
+
     });
 
     $scope.scrollto = function (eID){
@@ -33,6 +34,7 @@ app.controller('ResumeController', function($scope, $http, $location, anchorSmoo
     // call $anchorScroll()
     anchorSmoothScroll.scrollTo(eID); 
     };
+
     var monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     $scope.getFormatDate = function(date){
         if(date !=null){
@@ -86,8 +88,6 @@ app.controller('ResumeController', function($scope, $http, $location, anchorSmoo
         
     });
 
-
-
     // Get content for the experiences section
     $http.get('/api/resume/experiences/').success(function(response) {
         $scope.data.experiences = response;
@@ -96,5 +96,22 @@ app.controller('ResumeController', function($scope, $http, $location, anchorSmoo
     // Get content for the education section
     $http.get('/api/resume/education/').success(function(response) {
         $scope.data.education = response;
+    });
+    $scope.language="en"
+    // Get configuration for titles 
+    $http.get('/api/resume/titles/').success(function(response) {
+        var data = {}
+        _.each(response.results, function(titre){
+            var item = {}
+            item.label =  {fr:titre['label_fr'],en:titre['label_en'] }
+            item.subtitle = {fr:titre['subtitle_fr'],en:titre['subtitle_en'] }
+            data[titre.title] =item
+        })
+        data['info'] ={
+            nom :{fr:'Nom',en:'Name'},
+            location :{fr:'Adresse',en:'Location'},
+            year :{fr:'ans',en:'years'},   
+        }
+        $scope.titles = data
     });
 });

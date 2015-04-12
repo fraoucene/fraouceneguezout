@@ -1,3 +1,4 @@
+
 from django.contrib import admin
 
 from resume.models import *
@@ -8,6 +9,12 @@ class ConfigurationTitleAdmin(admin.ModelAdmin):
     list_editable = ('label', 'active', 'title', 'subtitle',)
     list_filter = ()
     search_fields = ('label',)
+
+class TitleConfigurationAdmin(admin.ModelAdmin):
+    list_display = ('__unicode__', 'pk', 'title', 'label_fr', 'label_en', 'subtitle_fr', 'subtitle_en')
+    list_editable = ('title', 'label_fr', 'label_en', 'subtitle_fr', 'subtitle_en')
+    list_filter = ()
+    search_fields = ('title',)
 
 class ConfigurationColorAdmin(admin.ModelAdmin):
     list_display = ('__unicode__', 'pk', 'label', 'active', 'title', 'subtitle',)
@@ -48,6 +55,7 @@ class EducationAdmin(admin.ModelAdmin):
 
 
 admin.site.register(ConfigurationTitle, ConfigurationTitleAdmin)
+admin.site.register(TitleConfiguration, TitleConfigurationAdmin)
 admin.site.register(ConfigurationColor, ConfigurationColorAdmin)
 admin.site.register(About, AboutAdmin)
 admin.site.register(Skill, SkillAdmin)

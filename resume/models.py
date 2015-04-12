@@ -3,6 +3,19 @@ import datetime
 from django.db import models
 
 
+class TitleConfiguration(models.Model):
+    """Store configuration for titles.
+    """
+
+    title = models.CharField('Title', max_length=255)
+    label_fr = models.CharField('Label FR', max_length=255)
+    label_en = models.CharField('Label EN', max_length=255)
+    subtitle_fr = models.CharField('Subtitle FR', max_length=255)
+    subtitle_en = models.CharField('Subtitle EN', max_length=255)
+
+    def __unicode__(self):
+        return self.title
+
 class ConfigurationTitle(models.Model):
     """Store configuration for titles.
     """

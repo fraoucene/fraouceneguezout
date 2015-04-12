@@ -1,4 +1,4 @@
-<!-- Start resume -->
+Start resume -->
 
 
 
@@ -8,7 +8,9 @@
     <!-- Start home -->
      
     <div id="wrapper-home">  
-        <div class="container test">
+        <div class="container ">
+            <input type="radio" ng-model="language" value="en" > English <br/>
+            <input type="radio" ng-model="language" value="fr">  French <br/>
             <div class="text-center">
                 <h1 style="color:{{configuration.colors.title}} "> <b>Fraoucene Guezout</b></h1>
                 <hr width="40%">
@@ -36,8 +38,8 @@
                 <ul class="nav navbar-nav">
                     <li class="bloc" ng-class="{'active':section=='#wrapper-about'}" ng-click="scrollto('#wrapper-about')"><a href="">Profile</a></li>
                     <li class="bloc" ng-class="{'active':section=='#experiences'}" ng-click="scrollto('#experiences')"><a href="">Experiences</a></li>
-                    <li class="bloc" ng-class="{'active':section=='#wrapper-skills'}" ng-click="scrollto('#wrapper-skills')"><a href="">Abilities</a></li>
-                    <li class="bloc" ng-class="{'active':section=='#wrapper-education'}" ng-click="scrollto('#wrapper-education')"><a href="">Educations</a></li>
+                    <li class="bloc" ng-class="{'active':section=='#wrapper-skills'}" ng-click="scrollto('#wrapper-skills')"><a ng-if="language=='en'" href="">Abilities</a><a ng-if="language=='fr'" href="">Compétences</a></li>
+                    <li class="bloc" ng-class="{'active':section=='#wrapper-education'}" ng-click="scrollto('#wrapper-education')"><a  href="">Educations</a></li>
                     <li class="bloc" ng-class="{'active':section=='#wrapper-contact'}" ng-click="scrollto('#wrapper-contact')" ><a href="">Contact</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->
@@ -46,12 +48,11 @@
 
     <!-- Start about -->
     <div class ="profile" id="wrapper-about">
-        
-        <h2>Profile</h2>
-        <center><p >I'm a creative web developer AngularJs</p></center>
+        <h2>{{titles.profile.label[language]}}</h2>
+        <center><p ng-bind-html="titles.profile.subtitle[language]" ></p></center>
         <hr width="80%">
         <div class="row">
-            <div  class="col-md-4">
+            <div d class="col-md-4">
                 <h3 style="color:{{ configuration.colors.about }}">About me</h3>
                 <p class="lead content" ng-bind-html="data.about[0].body"></p>
             </div>
@@ -61,11 +62,11 @@
             <div  class="col-md-4">
                 <h3 style="color:{{ configuration.colors.about }}">Details</h3>
                 <p class="content">
-                    <strong style="color:{{ configuration.colors.about }}">Name:</strong><br>
+                    <strong style="color:{{ configuration.colors.about }}">{{titles.info.nom[language]}}:</strong><br>
                     Fraoucene Guezout<br>
                     <strong style="color:{{ configuration.colors.about }}">Age:</strong><br>
-                    26 years<br>
-                    <strong style="color:{{ configuration.colors.about }}">Location:</strong><br>
+                    26 {{titles.info.year[language]}}<br>
+                    <strong style="color:{{ configuration.colors.about }}">{{titles.info.location[language]}}:</strong><br>
                     49 Avnene de Paris <br> 
                     Villejuif, France, Earth 
                 </p>
@@ -75,10 +76,12 @@
     <!-- End about -->
     <!-- Start experiences -->
     <div id="experiences" class="container">
-            <h2>Experiences</h2>
+            <!-- <h2>Experiences</h2>
             <p class="lead">
                 “Protons give an atom its identity, electrons its personality.”<br>- Bill Bryson, A short history of nearly everything
-            </p>
+            </p> -->
+            <h2>{{titles.experiences.label[language]}}</h2>
+            <center><p ng-bind-html="titles.experiences.subtitle[language]"></p></center>
             <hr width="90%">
             <div ng-repeat="experience in data.experiences.results" >
                 <experience 
@@ -100,14 +103,17 @@
   
     <!-- Start skills -->
      <div class ="profile" id="wrapper-skills">
-        <h2>Abilities</h2>
+<!--         <h2>Abilities</h2>
         <center>
         <p class="lead">“Life without knowledge is death in disguise.”
         <br>
         </p>
-        </center>
+        </center> -->
+        <h2>{{titles.abilities.label[language]}}</h2>
+        <center><p ng-bind-html="titles.abilities.subtitle[language]"></p></center>
         <hr>
-        <h3>Skills</h3>
+        <h3 ng-if="language=='en'">Skills</h3>
+        <h3 ng-if="language=='fr'">Compétences</h3>
             <div class="row">
                 <div class="col-md-6 ability-title">
                     <li  ng-if="$index < skills.length/2 " ng-repeat="skill in skills track by $index " style="  list-style-type: none;">
@@ -137,11 +143,12 @@
                 </div>
             </div>
             <div class="text-center project-referal">
-                <p>This project is build on a custom made AngularJs framework and DjangoRestFramework.</p>
-                <a href="https://github.com/fraoucene/fraouceneguezout" class="btn btn-primary" target="_blank">See project on Github</a>
+                <p ng-bind-html="titles.git.subtitle[language]"></p>
+                <a href="https://github.com/fraoucene/fraouceneguezout" class="btn btn-primary" target="_blank">{{titles.git.label[language]}}</a>
             </div>
             <hr>
-            <h3>Tools</h3>
+            <h3 ng-if="language=='en'">Tools</h3>
+            <h3 ng-if="language=='fr'">Outils ET Méthodes</h3>
             <div class="row">
                 <div class="col-md-6 ability-title">
                     <li ng-if="$index < tools.length/2 " ng-repeat="skill in tools track by $index " style="  list-style-type: none;">
@@ -171,7 +178,8 @@
                 </div>
             </div>
             <hr>
-            <h3>Languages</h3>
+            <h3 ng-if="language=='en'">Languages</h3>
+            <h3 ng-if="language=='fr'">Langues</h3>
             <div class="row">
                 <div class="col-md-6 ability-title">
                     <li ng-if="$index < languages.length/2 " ng-repeat="skill in languages track by $index " style="  list-style-type: none;">
@@ -208,10 +216,12 @@
 
     <!-- Start education -->
     <div id="wrapper-education" class="section">
-        <h2>Educations</h2>
+      <!--   <h2>Educations</h2>
         <p class="lead">
             “Protons give an atom its identity, electrons its personality.”<br>- Bill Bryson, A short history of nearly everything
-        </p>
+        </p> -->
+        <h2>{{titles.educations.label[language]}}</h2>
+        <center><p ng-bind-html="titles.educations.subtitle[language]" ></p></center>
         <hr width="80%">
         <div ng-repeat="experience in data.education.results" >
             <experience 
@@ -273,13 +283,12 @@
             </div>
         </div>
          <hr width="40%" >
-        <div class="title">Resume</div>
-        
-            <p class="text">My resume will be automatically updated on this link. So you can keep this link for my very latest resume</p>
+        <div class="title">{{titles.resume.label[language]}}</div>
+            <p class="text" ng-bind-html="titles.resume.subtitle[language]"></p>
             <a href="./static/source/fraoucene.pdf" target="_blank"  class ="btn btn-success">GET RESUME</a>
     </div>        
     
 
 <!-- END Get resume -->
 </div>
-<!-- End resume -->
+<!-- End resume

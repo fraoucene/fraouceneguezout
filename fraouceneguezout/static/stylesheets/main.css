@@ -123,20 +123,19 @@
 #wrapper-resume {
   height: 100%;
   width: 100%;
-  /*background: url("http://wallpaperspicturesphotos.com/wp-content/uploads/2015/02/hd-wallpapers_1080p.jpg") no-repeat center center fixed;*/
   background-image: url("/static/source/hd-wallpaper.jpg");
   background-position: center top;
   z-index: 200;
 }
-/* line 18, ../sass/partials/_resume.scss */
+/* line 17, ../sass/partials/_resume.scss */
 #wrapper-resume .section {
   padding: 50px 0;
 }
-/* line 21, ../sass/partials/_resume.scss */
+/* line 20, ../sass/partials/_resume.scss */
 #wrapper-resume .section .delimiter {
   margin-top: 40px;
 }
-/* line 26, ../sass/partials/_resume.scss */
+/* line 25, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-home {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -151,13 +150,13 @@
   height: 100%;
   width: 100%;
 }
-/* line 37, ../sass/partials/_resume.scss */
+/* line 36, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-home .text-vcenter {
   display: table-cell;
   text-align: center;
   vertical-align: middle;
 }
-/* line 42, ../sass/partials/_resume.scss */
+/* line 41, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-home .text-vcenter h1 {
   font-family: "Monaco";
   font-size: 3.5em;
@@ -165,7 +164,7 @@
   margin: 0;
   padding: 0;
 }
-/* line 51, ../sass/partials/_resume.scss */
+/* line 50, ../sass/partials/_resume.scss */
 #wrapper-resume .scroll-down {
   height: 80px;
   width: 110px;
@@ -178,7 +177,7 @@
   text-align: center;
   z-index: 6;
 }
-/* line 65, ../sass/partials/_resume.scss */
+/* line 64, ../sass/partials/_resume.scss */
 #wrapper-resume .box {
   height: 80px;
   width: 90px;
@@ -186,20 +185,20 @@
   right: 5%;
   z-index: 6;
 }
-/* line 72, ../sass/partials/_resume.scss */
+/* line 71, ../sass/partials/_resume.scss */
 #wrapper-resume .glyphicon {
   padding-top: 25px;
   font-size: 30px;
 }
-/* line 77, ../sass/partials/_resume.scss */
+/* line 76, ../sass/partials/_resume.scss */
 #wrapper-resume .scroll-down:hover {
   color: #22A39F;
 }
-/* line 81, ../sass/partials/_resume.scss */
+/* line 80, ../sass/partials/_resume.scss */
 #wrapper-resume .glyphicon:hover {
   padding-top: 32px;
 }
-/* line 86, ../sass/partials/_resume.scss */
+/* line 85, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-about {
   padding-left: 20%;
   padding-right: 20%;
@@ -207,20 +206,20 @@
   background-color: #341515;
   color: #dcdccc;
 }
-/* line 93, ../sass/partials/_resume.scss */
+/* line 92, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-about .content {
   display: inline-block;
   text-align: left;
 }
-/* line 96, ../sass/partials/_resume.scss */
+/* line 95, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-about .content :last-child {
   margin-bottom: 0;
 }
-/* line 100, ../sass/partials/_resume.scss */
+/* line 99, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-about .content .fa-inverse {
   color: #341515;
 }
-/* line 106, ../sass/partials/_resume.scss */
+/* line 105, ../sass/partials/_resume.scss */
 #wrapper-resume .scroll {
   background-color: #222222 !important;
   position: fixed;
@@ -231,7 +230,7 @@
   text-align: center;
   border-radius: 4px;
 }
-/* line 117, ../sass/partials/_resume.scss */
+/* line 116, ../sass/partials/_resume.scss */
 #wrapper-resume .scroll .bloc {
   height: 80px;
   padding-top: 13px;
@@ -240,12 +239,12 @@
   color: #FFFFFF;
   font-family: "Monaco";
 }
-/* line 126, ../sass/partials/_resume.scss */
+/* line 125, ../sass/partials/_resume.scss */
 #wrapper-resume .scroll .navbar-toggle {
   border-color: #ddd;
   border-radius: 4px;
 }
-/* line 129, ../sass/partials/_resume.scss */
+/* line 128, ../sass/partials/_resume.scss */
 #wrapper-resume .scroll .navbar-toggle .icon-bar {
   background-color: #888;
   display: block;
@@ -253,19 +252,19 @@
   height: 2px;
   border-radius: 1px;
 }
-/* line 137, ../sass/partials/_resume.scss */
+/* line 136, ../sass/partials/_resume.scss */
 #wrapper-resume .scroll .scroll {
   top: 0px !important;
 }
-/* line 141, ../sass/partials/_resume.scss */
+/* line 140, ../sass/partials/_resume.scss */
 #wrapper-resume .scroll .navbar-toggle:hover {
   background: #eee;
 }
-/* line 143, ../sass/partials/_resume.scss */
+/* line 142, ../sass/partials/_resume.scss */
 #wrapper-resume .scroll .navbar-toggle:hover .icon-bar {
   background-color: #222222;
 }
-/* line 147, ../sass/partials/_resume.scss */
+/* line 146, ../sass/partials/_resume.scss */
 #wrapper-resume .scroll .sr-only {
   position: absolute;
   width: 1px;
@@ -276,7 +275,7 @@
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-/* line 157, ../sass/partials/_resume.scss */
+/* line 156, ../sass/partials/_resume.scss */
 #wrapper-resume .scroll .active {
   float: none;
   background-color: #22A39F;
@@ -288,40 +287,40 @@
   text-align: center;
   z-index: 6;
 }
-/* line 169, ../sass/partials/_resume.scss */
+/* line 168, ../sass/partials/_resume.scss */
 #wrapper-resume .scroll .active a:hover {
   background: none;
   color: #fff;
 }
-/* line 175, ../sass/partials/_resume.scss */
+/* line 174, ../sass/partials/_resume.scss */
 #wrapper-resume .scroll a:hover {
   background: none;
   color: #22A39F;
 }
-/* line 179, ../sass/partials/_resume.scss */
+/* line 178, ../sass/partials/_resume.scss */
 #wrapper-resume .scroll a:focus {
   background: none;
 }
-/* line 183, ../sass/partials/_resume.scss */
+/* line 182, ../sass/partials/_resume.scss */
 #wrapper-resume .scroll a {
   color: #fff;
 }
-/* line 187, ../sass/partials/_resume.scss */
+/* line 186, ../sass/partials/_resume.scss */
 #wrapper-resume .scroll li {
   margin-left: -15px;
 }
-/* line 194, ../sass/partials/_resume.scss */
+/* line 193, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-skills {
   padding-left: 20%;
   padding-right: 20%;
   background-color: #fff;
   color: #3f3f3f;
 }
-/* line 200, ../sass/partials/_resume.scss */
+/* line 199, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-skills .skill {
   margin: 20px 0;
 }
-/* line 203, ../sass/partials/_resume.scss */
+/* line 202, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-skills .skill .skill-name {
   position: absolute;
   /* height: 100%; */
@@ -329,16 +328,16 @@
   margin-left: -15px;
   line-height: 90px;
 }
-/* line 211, ../sass/partials/_resume.scss */
+/* line 210, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-skills .project-referal {
   margin-top: 40px;
 }
-/* line 213, ../sass/partials/_resume.scss */
+/* line 212, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-skills .project-referal p {
   font-style: italic;
   color: #999999;
 }
-/* line 217, ../sass/partials/_resume.scss */
+/* line 216, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-skills .project-referal .btn-primary {
   background-color: #22A39F;
   border-color: #1c8784;
@@ -348,62 +347,62 @@
   padding-bottom: 6px;
   padding-top: 6px;
 }
-/* line 227, ../sass/partials/_resume.scss */
+/* line 226, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-skills p {
   font-size: 18px;
   color: #3f3f3f;
 }
-/* line 231, ../sass/partials/_resume.scss */
+/* line 230, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-skills li {
   min-height: 30px;
   padding: 3px 0px;
 }
-/* line 236, ../sass/partials/_resume.scss */
+/* line 235, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-skills hr {
   margin: 40px 0px;
   border-color: #727878;
   opacity: 0.2;
 }
-/* line 242, ../sass/partials/_resume.scss */
+/* line 241, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-skills h3 {
   color: #22a39f;
   font-weight: 300;
   font-size: 30px;
   margin-bottom: 20px;
 }
-/* line 248, ../sass/partials/_resume.scss */
+/* line 247, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-skills .glyphicon {
   padding-top: 0px;
   padding-right: 1px;
   padding-left: 1px;
   font-size: 14px !important;
 }
-/* line 255, ../sass/partials/_resume.scss */
+/* line 254, ../sass/partials/_resume.scss */
 #wrapper-resume #ability-score {
   float: right;
 }
-/* line 257, ../sass/partials/_resume.scss */
+/* line 256, ../sass/partials/_resume.scss */
 #wrapper-resume #ability-score a {
   color: #22A39F !important;
 }
-/* line 261, ../sass/partials/_resume.scss */
+/* line 260, ../sass/partials/_resume.scss */
 #wrapper-resume .ability-title {
   padding-right: 5%;
   padding-left: 5%;
 }
-/* line 264, ../sass/partials/_resume.scss */
+/* line 263, ../sass/partials/_resume.scss */
 #wrapper-resume .ability-title li {
   padding-left: 5%;
 }
-/* line 268, ../sass/partials/_resume.scss */
+/* line 267, ../sass/partials/_resume.scss */
 #wrapper-resume .ability-title li:hover {
   background: #eee;
 }
-/* line 271, ../sass/partials/_resume.scss */
+/* line 270, ../sass/partials/_resume.scss */
 #wrapper-resume .ability-title li:hover #ability-score span {
   margin-right: 3px;
 }
-/* line 280, ../sass/partials/_resume.scss */
+/* line 279, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-experiences {
   padding-left: 20%;
   padding-right: 20%;
@@ -416,58 +415,58 @@
   /* height: 800px; */
   width: 100%;
 }
-/* line 289, ../sass/partials/_resume.scss */
+/* line 288, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-experiences .panel {
   opacity: 0.9;
   background-color: #3f3f3f;
   border-color: #2b2b2b;
   color: #dcdccc;
 }
-/* line 295, ../sass/partials/_resume.scss */
+/* line 294, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-experiences .panel .panel-heading {
   background-color: #2b2b2b;
   border-color: #2b2b2b;
   color: #dcdccc;
 }
-/* line 302, ../sass/partials/_resume.scss */
+/* line 301, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-education {
   padding-left: 20%;
   padding-right: 20%;
   background: #F3EFE0;
   width: 100%;
 }
-/* line 308, ../sass/partials/_resume.scss */
+/* line 307, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-education h2 {
   font-size: 38px;
   text-align: center;
   font-weight: 300;
   color: #22A39F;
 }
-/* line 314, ../sass/partials/_resume.scss */
+/* line 313, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-education p {
   text-align: center;
   font-size: 18px;
   font-weight: 300;
   color: #3f3f3f;
 }
-/* line 323, ../sass/partials/_resume.scss */
+/* line 322, ../sass/partials/_resume.scss */
 #wrapper-resume .profile {
   padding: 40px 180px;
 }
-/* line 326, ../sass/partials/_resume.scss */
+/* line 325, ../sass/partials/_resume.scss */
 #wrapper-resume .profile h2 {
   font-size: 38px;
   text-align: center;
   font-weight: 300;
   color: #22A39F;
 }
-/* line 332, ../sass/partials/_resume.scss */
+/* line 331, ../sass/partials/_resume.scss */
 #wrapper-resume .profile p {
   font-size: 18px;
   font-weight: 300;
   color: #22A39F;
 }
-/* line 339, ../sass/partials/_resume.scss */
+/* line 338, ../sass/partials/_resume.scss */
 #wrapper-resume .profile .imgProfile {
   width: 220px;
   max-width: 246px;
@@ -475,24 +474,24 @@
   border-radius: 130px;
   border: 10px solid rgba(34, 34, 34, 0.54);
 }
-/* line 347, ../sass/partials/_resume.scss */
+/* line 346, ../sass/partials/_resume.scss */
 #wrapper-resume .container {
   padding-left: 10%;
   padding-right: 10%;
 }
-/* line 352, ../sass/partials/_resume.scss */
+/* line 351, ../sass/partials/_resume.scss */
 #wrapper-resume .btn-success {
   background: #22A39F;
   border-color: #22a39f;
 }
-/* line 357, ../sass/partials/_resume.scss */
+/* line 356, ../sass/partials/_resume.scss */
 #wrapper-resume #experiences {
   padding-left: 20%;
   padding-right: 20%;
   background: #F3EFE0;
   width: 100%;
 }
-/* line 362, ../sass/partials/_resume.scss */
+/* line 361, ../sass/partials/_resume.scss */
 #wrapper-resume #experiences h2 {
   font-size: 38px;
   margin-top: 12%;
@@ -500,19 +499,19 @@
   font-weight: 300;
   color: #22A39F;
 }
-/* line 369, ../sass/partials/_resume.scss */
+/* line 368, ../sass/partials/_resume.scss */
 #wrapper-resume #experiences p {
   text-align: center;
   font-size: 18px;
   font-weight: 300;
   color: #3f3f3f;
 }
-/* line 378, ../sass/partials/_resume.scss */
+/* line 377, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-contact {
   background: #341515 !important;
   padding-bottom: 120px;
 }
-/* line 381, ../sass/partials/_resume.scss */
+/* line 380, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-contact #icon {
   width: 30px;
   height: 26px;
@@ -522,13 +521,13 @@
   font-size: 15px;
   vertical-align: middle;
 }
-/* line 390, ../sass/partials/_resume.scss */
+/* line 389, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-contact ul.no-bullets {
   list-style-type: none;
   margin: 0px;
   padding: 0px;
 }
-/* line 395, ../sass/partials/_resume.scss */
+/* line 394, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-contact .title {
   padding-top: 40px;
   padding-bottom: 25px;
@@ -537,22 +536,22 @@
   font-weight: 300;
   color: #22A39F;
 }
-/* line 403, ../sass/partials/_resume.scss */
+/* line 402, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-contact li {
   margin-bottom: 8px;
 }
-/* line 406, ../sass/partials/_resume.scss */
+/* line 405, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-contact a {
   color: #22A39F;
 }
-/* line 409, ../sass/partials/_resume.scss */
+/* line 408, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-contact .btn-success {
   background-color: #22A39F;
   border-color: #1c8784;
   border-radius: 10px;
   color: white;
 }
-/* line 415, ../sass/partials/_resume.scss */
+/* line 414, ../sass/partials/_resume.scss */
 #wrapper-resume #wrapper-contact .text {
   color: #22A39F;
 }

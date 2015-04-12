@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import About, ConfigurationColor, ConfigurationTitle, Education, Experience, Skill
+from .models import About, ConfigurationColor, ConfigurationTitle, Education, Experience, Skill, TitleConfiguration
 
 
 class AboutSerializer(serializers.ModelSerializer):
@@ -10,6 +10,11 @@ class AboutSerializer(serializers.ModelSerializer):
         fields = ('pk', 'title', 'body',)
 
 
+class TitleConfigurationSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = TitleConfiguration
+        fields = ('pk', 'title', 'label_fr', 'label_en', 'subtitle_fr', 'subtitle_en')
 
 class ConfigurationColorSerializer(serializers.ModelSerializer):
 
