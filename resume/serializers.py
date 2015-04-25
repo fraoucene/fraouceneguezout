@@ -7,7 +7,7 @@ class AboutSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = About
-        fields = ('pk', 'title', 'body',)
+        fields = ('pk', 'title','title_fr', 'body','body_fr')
 
 
 class TitleConfigurationSerializer(serializers.ModelSerializer):
@@ -41,14 +41,16 @@ class EducationSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Education
-        fields = ('pk', 'school', 'description', 'start_on', 'end_on', 'current', 'title', 'tools', 'location', 'detail', 'lien')
+        fields = ('pk', 'school', 'description', 'description_fr', 'start_on', 'end_on', 'current', 'title',
+                   'title_fr', 'tools', 'location', 'detail', 'detail_fr', 'lien')
 
 
 class ExperienceSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Experience
-        fields = ('pk', 'company','start_on', 'end_on', 'description', 'current', 'title', 'tools', 'location', 'detail', 'lien')
+        fields = ('pk', 'company','start_on', 'end_on', 'description', 'description_fr', 'current', 'title',
+                    'title_fr', 'tools', 'location', 'detail', 'detail_fr', 'lien')
 
 
 class SkillSerializer(serializers.ModelSerializer):

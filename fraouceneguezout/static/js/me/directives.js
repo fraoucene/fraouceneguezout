@@ -27,6 +27,8 @@ app.directive('experience', function($http) {
             detail: '@',
         	location: '@',
         	lien: '@',
+            messageshow:'@',
+            messagehide:'@',
         },
         replace:true,
         templateUrl: '/partials/experiences.template.html',

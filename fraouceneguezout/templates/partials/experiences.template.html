@@ -20,7 +20,7 @@
 	</div>
 
 	<div ng-show="!show && detail" class="detail-label">
-		<i><a ng-show="!show" ng-click="show='true'" href="" style="margin-right:5%">more details</a></i>
+		<i><a href ng-show="!show" ng-click="show='true'" href="" style="margin-right:5%">{{messageshow}}...</a></i>
 		<!--<a href=""><span class="fa fa-arrow-down"></span></a>-->
 	</div>
 	<div ng-show="show" class="detail">
@@ -28,7 +28,7 @@
 		<div class="panel-body lead" ng-bind-html="detail"></div>
 	</div>
 	<div ng-show="show" class="detail-label">
-		<i><a ng-click="show=false" href="" style="margin-right:5%">hide details</a></i>
+		<i><a href ng-click="show=false" href="" style="margin-right:5%">{{messagehide}}...</a></i>
 		<!--<a href=""><span class="fa fa-arrow-down"></span></a>-->
 	</div>
 	<div class ="footer">

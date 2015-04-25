@@ -57,6 +57,8 @@ class About(models.Model):
 
     title = models.CharField('Title', max_length=255)
     body = models.TextField('Body', null=True, blank=True)
+    title_fr = models.CharField('Title FR', max_length=255)
+    body_fr = models.TextField('Body FR', null=True, blank=True)
 
     def __unicode__(self):
         return self.title
@@ -89,11 +91,14 @@ class Experience(models.Model):
     start_on = models.DateField('Start on')
     end_on =  models.DateField('End on', blank=True, null=True)
     current = models.BooleanField('Current', default=False)
+    description_fr = models.TextField('Description FR', blank=True, null=True)
     description = models.TextField('Description', blank=True, null=True)
     title = models.CharField('Title', max_length=255, blank=True, null=True)
+    title_fr = models.CharField('Title FR', max_length=255, blank=True, null=True)
     tools = models.TextField('Tools', blank=True, null=True)
     location = models.TextField('Location', blank=True, null=True)
     detail = models.TextField('Detail', blank=True, null=True)
+    detail_fr = models.TextField('Detail FR', blank=True, null=True)
     lien = models.CharField('Lien', max_length=255, blank=True, null=True)
 
     def __unicode__(self):
@@ -109,10 +114,13 @@ class Education(models.Model):
     end_on =  models.DateField('End on', blank=True, null=True)
     current = models.BooleanField('Current', default=False)
     description = models.TextField('Description', blank=True, null=True)
+    description_fr = models.TextField('Description FR', blank=True, null=True)
     title = models.CharField('Title', max_length=255, blank=True, null=True)
+    title_fr = models.CharField('Title FR', max_length=255, blank=True, null=True)
     tools = models.TextField('Tools', blank=True, null=True)
     location = models.TextField('Location', blank=True, null=True)
     detail = models.TextField('Detail', blank=True, null=True)
+    detail_fr = models.TextField('Detail FR', blank=True, null=True)
     lien = models.CharField('Lien', max_length=255, blank=True, null=True)
 
     def __unicode__(self):

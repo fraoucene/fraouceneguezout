@@ -23,8 +23,16 @@ app.controller('ResumeController', function($scope, $http, $location, anchorSmoo
 
     // Get content for the about section
     $http.get('/api/resume/about/').success(function(response) {
-        $scope.data.about = response.results;
-
+        var about = {}
+        about.title ={
+            fr: response.results[0]["title_fr"],
+            en:response.results[0]["title"]
+        }
+        about.content ={
+            fr: response.results[0]["body_fr"],
+            en:response.results[0]["body"]
+        }
+        $scope.about = about
     });
 
     $scope.scrollto = function (eID){
@@ -90,12 +98,65 @@ app.controller('ResumeController', function($scope, $http, $location, anchorSmoo
 
     // Get content for the experiences section
     $http.get('/api/resume/experiences/').success(function(response) {
-        $scope.data.experiences = response;
+        var data = []
+        _.each(response.results, function(experience){
+            var item = {}
+            item.discription ={
+                fr: experience["description_fr"],
+                en: experience["description"]
+            }
+            item.title ={
+                fr: experience["title_fr"],
+                en: experience["title"]
+            }
+            item.detail ={
+                fr: experience["detail_fr"],
+                en: experience["detail"]
+            }
+            item.company = experience.company
+            item.duration = experience.duration
+            item.tools = experience.tools
+            item.location = experience.location
+            item.lien = experience.lien
+            item.start_on = experience.start_on
+            item.end_on = experience.end_on
+            item.messageshow = {en:"Show more", fr:"Plus"}
+            item.messagehide = {en:"Show less", fr:"moins"} 
+            data.push(item)
+        })
+        $scope.data.experiences = data
     });
 
     // Get content for the education section
     $http.get('/api/resume/education/').success(function(response) {
-        $scope.data.education = response;
+        //$scope.data.education = response;
+         var data = []
+        _.each(response.results, function(etude){
+            var item = {}
+            item.discription ={
+                fr: etude["description_fr"],
+                en: etude["description"]
+            }
+            item.title ={
+                fr: etude["title_fr"],
+                en: etude["title"]
+            }
+            item.detail ={
+                fr: etude["detail_fr"],
+                en: etude["detail"]
+            }
+            item.school = etude.school
+            item.duration = etude.duration
+            item.tools = etude.tools
+            item.location = etude.location
+            item.lien = etude.lien
+            item.start_on = etude.start_on
+            item.end_on = etude.end_on
+            item.messageshow = {en:"Show more", fr:"Plus"}
+            item.messagehide = {en:"Show less", fr:"moins"} 
+            data.push(item)
+        })
+        $scope.data.education = data
     });
     $scope.language="en"
     // Get configuration for titles 

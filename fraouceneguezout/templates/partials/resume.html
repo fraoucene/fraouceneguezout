@@ -1,4 +1,4 @@
-Start resume -->
+<!--Start resume -->
 
 
 
@@ -14,7 +14,9 @@ Start resume -->
             <div class="text-center">
                 <h1 style="color:{{configuration.colors.title}} "> <b>Fraoucene Guezout</b></h1>
                 <hr width="40%">
-                <p style="color:{{ configuration.colors.subtitle }}" class="lead">Interactive resume</p>
+                <p ng-if="language=='en'" style="color:{{ configuration.colors.subtitle }}" class="lead">Interactive resume</p>
+                <p ng-if="language=='fr'" style="color:{{ configuration.colors.subtitle }}" class="lead">CV Interactif</p>
+                 
             </div>
         </div>
     </div>
@@ -53,8 +55,8 @@ Start resume -->
         <hr width="80%">
         <div class="row">
             <div d class="col-md-4">
-                <h3 style="color:{{ configuration.colors.about }}">About me</h3>
-                <p class="lead content" ng-bind-html="data.about[0].body"></p>
+                <h3 style="color:{{ configuration.colors.about }}">{{about.tilte[language]}}</h3>
+                <p class="lead content" ng-bind-html="about.content[language]"></p>
             </div>
             <div  class="col-md-4 text-center">
                 <img class="imgProfile" src="/static/source/profile.jpg"  width="146" height="146">
@@ -83,18 +85,21 @@ Start resume -->
             <h2>{{titles.experiences.label[language]}}</h2>
             <center><p ng-bind-html="titles.experiences.subtitle[language]"></p></center>
             <hr width="90%">
-            <div ng-repeat="experience in data.experiences.results" >
+            <div ng-repeat="experience in data.experiences" >
                 <experience 
-                    title="{{experience.title}}"
+                    title="{{experience.title[language]}}"
                     company="{{experience.company}}"
                     duration="{{experience.duration}}"
-                    description="{{experience.description}}"
+                    description="{{experience.description[language]}}"
                     tools="{{experience.tools}}"
-                    detail="{{experience.detail}}"
+                    detail="{{experience.detail[language]}}"
                     location="{{experience.location}}"
                     lien="{{experience.lien}}"
                     start="{{getFormatDate(experience.start_on)}}"
                     end="{{getFormatDate(experience.end_on)}}"
+                    messageshow="{{experience.messageshow[language]}}"
+                    messagehide="{{experience.messagehide[language]}}"
+
                 ></experience>
             </div>
     </div>
@@ -223,18 +228,20 @@ Start resume -->
         <h2>{{titles.educations.label[language]}}</h2>
         <center><p ng-bind-html="titles.educations.subtitle[language]" ></p></center>
         <hr width="80%">
-        <div ng-repeat="experience in data.education.results" >
+        <div ng-repeat="etude in data.education" >
             <experience 
-                title="{{experience.title}}"
-                company="{{experience.school}}"
-                duration="{{experience.duration}}"
-                description="{{experience.description}}"
-                tools="{{experience.tools}}"
-                detail="{{experience.detail}}"
-                location="{{experience.location}}"
-                lien="{{experience.lien}}"
-                start="{{getFormatDate(experience.start_on)}}"
-                end="{{getFormatDate(experience.end_on)}}"
+                title="{{etude.title[language]}}"
+                company="{{etude.school}}"
+                duration="{{etude.duration}}"
+                description="{{etude.discription[language]}}"
+                tools="{{etude.tools}}"
+                detail="{{etude.detail[language]}}"
+                location="{{etude.location}}"
+                lien="{{etude.lien}}"
+                start="{{getFormatDate(etude.start_on)}}"
+                end="{{getFormatDate(etude.end_on)}}"
+                messageshow="{{etude.messageshow[language]}}"
+                messagehide="{{etude.messagehide[language]}}"
             ></experience>
         </div>
     </div>

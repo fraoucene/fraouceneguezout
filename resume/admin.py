@@ -24,7 +24,7 @@ class ConfigurationColorAdmin(admin.ModelAdmin):
 
 
 class AboutAdmin(admin.ModelAdmin):
-    list_display = ('__unicode__', 'pk', 'title',)
+    list_display = ('__unicode__', 'pk', 'title','body','title_fr','body_fr')
     list_editable = ('title',)
     list_filter = ()
     search_fields = ('title',)
@@ -38,18 +38,18 @@ class SkillAdmin(admin.ModelAdmin):
 class ExperienceAdmin(admin.ModelAdmin):
     list_display = (
         '__unicode__', 'pk',
-        'company', 'description', 'start_on', 'end_on', 'current','title', 'tools', 'location', 'detail', 'lien',
+        'company', 'description', 'description_fr', 'start_on', 'end_on', 'current','title','title_fr' ,'tools', 'location', 'detail', 'detail_fr', 'lien',
     )
-    list_editable = ('company', 'description', 'start_on', 'end_on', 'current','title', 'tools', 'location', 'detail', 'lien',)
+    list_editable = ('company', 'description','description_fr', 'start_on', 'end_on', 'current','title', 'title_fr', 'tools', 'location', 'detail', 'detail_fr', 'lien',)
     list_filter = ('start_on', 'end_on', 'current',)
     search_fields = ('company', 'description',)
 
 class EducationAdmin(admin.ModelAdmin):
     list_display = (
         '__unicode__', 'pk',
-        'school', 'description', 'start_on', 'end_on', 'current', 'title', 'tools', 'location', 'detail', 'lien',
+        'school', 'description','description_fr', 'start_on', 'end_on', 'current', 'title','title_fr', 'tools', 'location', 'detail','detail_fr', 'lien',
     )
-    list_editable = ('school', 'description', 'start_on', 'end_on', 'current' ,'title', 'tools', 'location', 'detail', 'lien',)
+    list_editable = ('school', 'description', 'description_fr', 'start_on', 'end_on', 'current' ,'title', 'title_fr', 'tools', 'location', 'detail', 'detail_fr', 'lien',)
     list_filter = ('start_on', 'end_on', 'current',)
     search_fields = ('school', 'description',)
 
