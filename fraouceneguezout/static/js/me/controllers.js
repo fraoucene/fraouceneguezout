@@ -158,7 +158,17 @@ app.controller('ResumeController', function($scope, $http, $location, anchorSmoo
         })
         $scope.data.education = data
     });
-    $scope.language="en"
+    $scope.language = "en"
+    $scope.languagess = []
+        $scope.languagess.french = {
+            fr : "Français",
+            en : "French"
+        }
+        $scope.languagess.english = {
+            fr : "Anglais",
+            en : "English"
+        }
+    
     // Get configuration for titles 
     $http.get('/api/resume/titles/').success(function(response) {
         var data = {}
